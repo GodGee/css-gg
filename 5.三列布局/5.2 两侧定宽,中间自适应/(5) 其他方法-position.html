@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>(4) 其他方法-position</title>
+    <style type="text/css">
+      #parent {
+        position: relative; /*子绝父相*/
+      }
+      #left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 500px;
+        background-color: #f00;
+      }
+      #center {
+        height: 500px;
+        margin-left: 100px; /*大于等于#left的宽度,或者给#parent添加同样大小的padding-left*/
+        margin-right: 200px; /*大于等于#right的宽度,或者给#parent添加同样大小的padding-right*/
+        background-color: #eeff2b;
+      }
+      #right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 500px;
+        background-color: #0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 优缺点： 优点：容易理解，兼容性比较好 缺点：需手动计算宽度确定边距；脱离文档流；代码繁多 -->
+    <body>
+      <div id="parent">
+        <div id="left">左列定宽</div>
+        <div id="center">中间自适应</div>
+        <div id="right">右列定宽</div>
+      </div>
+    </body>
+  </body>
+</html>

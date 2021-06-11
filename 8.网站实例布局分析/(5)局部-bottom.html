@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>局部——bottom</title>
+    <style type="text/css">
+      .bottom {
+        height: 274px;
+        background-color: #fff;
+      }
+      .bottom-service {
+        height: 80px;
+        background-color: seagreen;
+      }
+      .bottom-service > ul {
+        height: 100%;
+      }
+      .bottom-service > ul li {
+        position: relative;
+        padding: 0 50px;
+        float: left;
+        width: 20%;
+        height: 100%;
+        background-color: goldenrod;
+        background-clip: content-box;
+      }
+      .bottom-service > ul li + li::before {
+        position: absolute;
+        top: 28px;
+        left: 0;
+        content: '';
+        width: 1px;
+        height: 24px;
+        background-color: #999;
+      }
+      .bottom-links {
+        height: 192px;
+        background-color: #8545e0;
+      }
+      .links-left {
+        float: left;
+        width: 960px;
+        height: 100%;
+        background-color: yellow;
+      }
+      .links-left > ul {
+        height: 100%;
+      }
+      .links-left > ul li {
+        padding-right: 60px;
+        float: left;
+        width: 16.666666666666667%;
+        height: 100%;
+        border: 1px solid #000;
+        background-color: #ff0000;
+        background-clip: content-box;
+      }
+      .links-right {
+        float: right;
+        width: 252px;
+        height: 100%;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bottom">
+      <div class="container">
+        <div class="bottom-service">
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="bottom-links">
+          <div class="links-left">
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+          <div class="links-right"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

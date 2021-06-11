@@ -7,12 +7,22 @@
     <title>(4)使用绝对定位实现</title>
     <style type="text/css">
       #parent {
-        height: 500px;
+        position: relative; /*子绝父相*/
       }
       #left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 100px; /*大于等于#rigth的宽度*/
+        height: 500px;
         background-color: hotpink;
       }
       #right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100px;
+        height: 500px;
         background-color: green;
       }
     </style>

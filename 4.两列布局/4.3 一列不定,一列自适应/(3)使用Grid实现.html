@@ -7,20 +7,24 @@
     <title>(3)使用Grid实现</title>
     <style type="text/css">
       #parent {
-        height: 500px;
+        display: grid;
+        grid-template-columns: auto 1fr; /*auto和1fr换一下顺序就是左列自适应,右列不定宽了*/
       }
       #left {
+        margin-right: 10px;
+        height: 500px;
         background-color: hotpink;
       }
       #right {
+        height: 500px;
         background-color: green;
       }
     </style>
   </head>
   <body>
     <div id="parent">
-      <div id="left">左列自适应</div>
-      <div id="right">右列定宽</div>
+      <div id="left">左列不定宽</div>
+      <div id="right">右列自适应</div>
     </div>
   </body>
 </html>

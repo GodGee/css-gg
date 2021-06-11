@@ -4,24 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>(6)使用Grid实现</title>
+    <title>(4) 其他方法-flex</title>
     <style type="text/css">
       #parent {
         height: 500px;
-        display: grid;
-        grid-template-columns: auto 100px; /*设定2列,auto换成1fr也行*/
+        display: flex;
       }
       #left {
-        background-color: hotpink;
+        width: 100px;
+        background-color: #f00;
+      }
+      #center {
+        flex: 1; /*均分#parent剩余的部分*/
+        background-color: #eeff2b;
       }
       #right {
-        background-color: green;
+        width: 200px;
+        background-color: #0f0;
       }
     </style>
   </head>
   <body>
     <div id="parent">
-      <div id="left">左列自适应</div>
+      <div id="left">左列定宽</div>
+      <div id="center">中间自适应</div>
       <div id="right">右列定宽</div>
     </div>
   </body>

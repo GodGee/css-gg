@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>(3)局部——top</title>
+    <style type="text/css">
+      .top {
+        height: 1210px;
+        background-color: #fff;
+      }
+      .top-nav {
+        height: 100px;
+        background-color: #f00;
+      }
+      .top-slider {
+        margin-bottom: 14px;
+        position: relative;
+        height: 460px;
+        background-color: #00f;
+      }
+      .slider-navbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 234px;
+        height: 100%;
+        background-color: black;
+        opacity: 0.5;
+      }
+      .top-recommend {
+        margin-bottom: 26px;
+        height: 170px;
+        background-color: #0f0;
+      }
+      .recommend-left {
+        float: left;
+        height: 100%;
+        width: 234px;
+        background-color: skyblue;
+      }
+      .recommend-right {
+        float: right;
+        width: 978px;
+        height: 100%;
+        border: 1px solid #000;
+      }
+      .recommend-right > ul {
+        height: 100%;
+      }
+      .recommend-right > ul li {
+        float: left;
+        width: 316px;
+        height: 100%;
+        background-color: deepskyblue;
+      }
+      .recommend-right > ul li + li {
+        margin-left: 14px;
+      }
+      .top-flashsale {
+        height: 438px;
+        background-color: #ff4455;
+      }
+      .flashsale-title {
+        height: 58px;
+        background-color: purple;
+      }
+      .flashsale-content {
+        border: 1px solid #000;
+        padding-bottom: 40px;
+        height: 380px;
+      }
+      .content-timer {
+        margin-right: 14px;
+        float: left;
+        width: 234px;
+        height: 100%;
+        background-color: #fff;
+      }
+      .content-shops {
+        overflow: hidden;
+        height: 100%;
+        background-color: #6effb1;
+      }
+      .content-shops > li {
+        float: left;
+        width: 234px;
+        height: 100%;
+        background-color: #fff;
+      }
+      .content-shops > li + li {
+        margin-left: 12.5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <div class="container">
+        <div class="top-nav"></div>
+        <div class="top-slider">
+          <div class="slider-navbar"></div>
+        </div>
+        <div class="top-recommend">
+          <div class="recommend-left"></div>
+          <div class="recommend-right">
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        <div class="top-flashsale">
+          <div class="flashsale-title"></div>
+          <div class="flashsale-content">
+            <div class="content-timer"></div>
+            <ul class="content-shops">
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

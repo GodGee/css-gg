@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>固定宽高的块级盒子absolute + 负 margin</title>
+    <style type="text/css">
+    .parent {
+        position: relative;
+        background: gray;
+        height: 200px;
+        border: 1px solid #ddd;
+    }
+
+    .child {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: calc(50% - 50px);
+        top: calc(50% - 50px);
+        background: black;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>图片</title>
+    <style type="text/css">
+      #parent {
+        height: 150px;
+        line-height: 150px;
+        font-size: 0;
+        background-color: hotpink;
+      }
+      img#son {
+        vertical-align: middle;
+      } /*默认是基线对齐，改为middle*/
+    </style>
+  </head>
+  <body>
+    <!-- 原理：vertical-align和line-height的基友关系 -->
+    <!-- 优缺点 优点：简单；兼容性好 缺点：需要添加font-size: 0; 才可以完全的垂直居中；不过需要主要，html#parent包裹img之间需要有换行或空格 -->
+    <div id="parent">
+      <img id="son" src="./1.jpeg" alt="" srcset="" />
+    </div>
+  </body>
+</html>

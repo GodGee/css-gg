@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>设置父级背景图片</title>
+    <style type="text/css">
+    .layout {
+        background: url(./bg.png) repeat-y;
+        background-size: 100%;
+        height: 200px;
+        min-width: 500px;
+    }
+
+    section {
+        float: left;
+        width: 33.3%;
+        height: 200px;
+    }
+
+    .green {
+        background-color: #41ab3e;
+    }
+
+    .orange {
+        background-color: orange;
+    }
+
+    .blue {
+        background-color: #4ba0d8;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="layout">
+        <main>
+            <section class="green"></section>
+            <section class="orange"></section>
+            <section class="blue"></section>
+        </main>
+    </div>
+</body>
+
+</html>

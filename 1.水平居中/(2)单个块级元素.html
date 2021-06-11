@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>单个块级元素</title>
+    <style type="text/css">
+      #son {
+        width: 100px; /*必须定宽*/
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 原理：根据规范介绍得很清楚了，有这么一种情况：在margin有节余的同时如果左右margin设置了auto，将会均分剩余空间。另外，如果上下的margin设置了auto，其计算值为0 -->
+    <!-- 优缺点 优点：简单；兼容性好 缺点：必须定宽，并且值不能为auto；宽度要小于父元素，否则无效 -->
+    <div id="son">单个块级元素</div>
+  </body>
+</html>

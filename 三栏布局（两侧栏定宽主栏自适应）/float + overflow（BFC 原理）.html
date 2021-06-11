@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float + overflow（BFC 原理）</title>
+    <style type="text/css">
+    .main {
+        overflow: hidden;
+        height: 200px;
+        background: #38ab89;
+    }
+
+    .left {
+        float: left;
+        width: 200px;
+        height: 200px;
+        background: orange;
+    }
+
+    .right {
+        float: right;
+        width: 200px;
+        height: 200px;
+        background: orange;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="layout">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="main"></div>
+    </div>
+</body>
+
+</html>

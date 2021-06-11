@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>(7)视窗居中</title>
+    <style type="text/css">
+      #son {
+        /*0如果去掉，则会多出滚动条并且上下都是50vh的margin。如果去掉就给body加上overflow:hidden;*/
+        margin: 50vh auto 0;
+        transform: translateY(-50%);
+
+        width: 50px;
+        height: 50px;
+        background-color: hotpink;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 原理：vh为视口单位，视口即文档可视的部分，50vh就是视口高度的50/100，设置50vh上边距再 -->
+    <!-- 优缺点 优点：简单；容易理解；两句代码达到屏幕水平垂直居中 缺点：兼容性不好（ie9+，Android4.4+） -->
+    <div id="parent"><div id="son"></div></div>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>(6)flex</title>
+    <style type="text/css">
+      #parent {
+        display: flex;
+
+        width: 250px;
+        height: 150px;
+        background-color: green;
+      }
+
+      #son {
+        margin: auto;
+
+        width: 150px;
+        height: 100px;
+        background-color: hotpink;
+      }
+
+      /* 或 */
+      #parent {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* 或 */
+      #parent {
+        display: flex;
+        justify-content: center;
+      }
+      #son {
+        align-self: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 原理：flex设置对齐方式罢了，请查阅文末flex阅读推荐 -->
+    <!-- 优缺点 优点：简单灵活；功能强大 缺点：PC端兼容性不好，移动端（Android4.0+） -->
+    <div id="parent"><div id="son"></div></div>
+  </body>
+</html>

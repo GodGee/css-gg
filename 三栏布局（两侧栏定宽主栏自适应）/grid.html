@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style type="text/css">
+    .layout {
+        display: grid;
+        grid-template-columns: 200px auto 200px;
+        height: 200px;
+        background: gray;
+        min-width: 500px;
+    }
+
+    main {
+        height: 200px;
+        background: #38ab89;
+    }
+
+    aside {
+        height: 200px;
+        background: orange;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="layout">
+        <aside></aside>
+        <main></main>
+        <aside></aside>
+    </div>
+</body>
+
+</html>

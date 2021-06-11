@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>(1)利用float+margin实现</title>
+    <style type="text/css">
+      #left {
+        float: left;
+        width: 100px;
+        height: 500px;
+        background-color: hotpink;
+      }
+      #right {
+        margin-left: 100px; /*大于等于#left的宽度*/
+        height: 500px;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="left">左列定宽</div>
+    <div id="right">右列自适应</div>
+  </body>
+</html>

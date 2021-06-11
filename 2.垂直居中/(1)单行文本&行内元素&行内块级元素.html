@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>单行文本&行内元素&行内块级元素</title>
+    <style type="text/css">
+      #parent {
+        height: 150px;
+        line-height: 150px; /*与height等值*/
+        background-color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 原理：line-height的最终表现是通过inline box实现的，而无论inline box所占据的高度是多少（无论比文字大还是比文字小），其占据的空间都是与文字内容公用水平中垂线的。 -->
+    <!-- 优缺点 优点：简单；兼容性好 缺点：只能用于单行行内内容；要知道高度的值 -->
+    <div id="parent">
+      <span>单行文本&行内元素&行内块级元素单行文本&行内元素&行内块级元素单行文本&行内元素&行内块级元素</span>
+    </div>
+  </body>
+</html>

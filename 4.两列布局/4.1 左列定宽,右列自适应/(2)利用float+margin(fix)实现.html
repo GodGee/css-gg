@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>(2)利用float+margin(fix)实现</title>
+    <style type="text/css">
+      #left {
+        float: left;
+        width: 100px;
+        height: 500px;
+        background-color: hotpink;
+      }
+      #right-fix {
+        float: right;
+        width: 100%;
+        margin-left: -100px; /*正值大于或等于#left的宽度,才能显示在同一行*/
+      }
+      #right {
+        margin-left: 100px;
+        height: 500px;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="left">左列定宽</div>
+    <div id="right-fix">
+      <div id="right">右列自适应</div>
+    </div>
+  </body>
+</html>

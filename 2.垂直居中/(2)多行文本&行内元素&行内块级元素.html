@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>多行文本&行内元素&行内块级元素</title>
+    <style type="text/css">
+      #parent {
+        /*或者用span把所有文字包裹起来，设置display：inline-block转换成图片的方式解决*/
+        height: 150px;
+        line-height: 30px; /*元素在页面呈现为5行,则line-height的值为height/5*/
+        background-color: hotpink;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 原理：line-height的最终表现是通过inline box实现的，而无论inline box所占据的高度是多少（无论比文字大还是比文字小），其占据的空间都是与文字内容公用水平中垂线的。 -->
+    <!-- 优缺点 优点：简单；兼容性好 缺点：只能用于行内内容；需要知道高度和最终呈现多少行来计算出line-height的值，建议用span包裹多行文本 -->
+    <span id="parent">
+      <div>多行文本&行内元素&行内块级元素</div>
+      <div>多行文本&行内元素&行内块级元素</div>
+      <div>多行文本&行内元素&行内块级元素</div>
+      <div>多行文本&行内元素&行内块级元素</div>
+      <div>多行文本&行内元素&行内块级元素</div>
+    </span>
+  </body>
+</html>

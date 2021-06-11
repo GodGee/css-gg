@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style type="text/css">
+    html,
+    body {
+        height: 100%;
+    }
+
+    .layout {
+        height: 100%;
+        display: grid;
+        /*css fr 单位是一个自适应单位，   grid-template-columns: 250px repeat(12, 1fr);
+        fr单位被用于在一系列长度值中分配剩余空间，如果多个已指定了多个部分，则剩下的空间根据各自的数字按比例分配。*/
+        grid-template-rows: 50px 1fr 50px; 
+    }
+
+    body {
+        margin: 0;
+    }
+
+
+
+
+    .green {
+        background-color: #41ab3e;
+    }
+
+    .orange {
+        background-color: orange;
+    }
+
+    .blue {
+        background-color: #4ba0d8;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="layout">
+        <header class="green"></header>
+        <main class="orange">
+            <div class="inner"></div>
+        </main>
+        <footer class="blue"></footer>
+    </div>
+</body>
+
+</html>

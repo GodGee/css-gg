@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不固定宽高的块级盒子grid</title>
+    <style type="text/css">
+    .parent {
+        display: grid;
+        height: 200px;
+        background: gray;
+        border: 1px solid;
+    }
+
+    .child {
+        justify-self: center;
+        align-self: center;
+        background: white;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child">不固定宽高的块级盒子grid</div>
+    </div>
+</body>
+
+</html>

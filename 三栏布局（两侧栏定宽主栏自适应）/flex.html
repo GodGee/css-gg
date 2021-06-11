@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style type="text/css">
+    .layout {
+        display: flex;
+        height: 200px;
+        background: gray;
+        min-width: 500px;
+    }
+
+    main {
+        flex: 1;
+        height: 200px;
+        background: #38ab89;
+    }
+
+    aside {
+        width: 200px;
+        height: 200px;
+        background: orange;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="layout">
+        <aside></aside>
+        <main></main>
+        <aside></aside>
+    </div>
+</body>
+
+</html>

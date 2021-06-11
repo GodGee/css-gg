@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>单个块级元素</title>
+    <style type="text/css">
+      #parent {
+        display: flex;
+        align-items: center;
+      }
+      /* 或 */
+      #parent {
+        display: flex;
+      }
+
+      #son {
+        align-self: center;
+      }
+      /* 或 */
+      /*原理：这个尚未搞清楚，应该是flex使margin上下边界无限延伸至剩余空间并平分了*/
+      #parent {
+        display: flex;
+      }
+      #son {
+        margin: auto 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 优缺点
+    优点：简单灵活；功能强大
+    缺点：PC端兼容性不好，移动端（Android4.0+） 
+    -->
+    <div id="parent">
+      <div id="son">单个块级元素</div>
+    </div>
+  </body>
+</html>

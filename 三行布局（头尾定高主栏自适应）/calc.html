@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calc</title>
+    <style type="text/css">
+    html,
+    body,
+    .layout {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    header,
+    footer {
+        height:200px;
+    }
+
+    main {
+        overflow-y: auto;
+        height: calc(100% - 400px);
+
+    }
+
+    .green {
+        background-color: #41ab3e;
+    }
+
+    .orange {
+        background-color: orange;
+    }
+
+    .blue {
+        background-color: #4ba0d8;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="layout">
+        <header class="green"></header>
+        <main class="orange">
+            <div class="inner"></div>
+        </main>
+        <footer class="blue"></footer>
+    </div>
+</body>
+
+</html>

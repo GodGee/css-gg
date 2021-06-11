@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>(5)绝对居中</title>
+    <style type="text/css">
+      #parent {
+        position: relative;
+
+        background-color: hotpink;
+        width: 200px;
+        height: 350px;
+      }
+      #son {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100px;
+        height: 50px;
+
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 原理：当top、bottom为0时,margin-top&bottom设置auto的话会无限延伸占满空间并且平分；当left、right为0时,margin-left&right设置auto的话会无限延伸占满空间并且平分 -->
+    <!-- 优缺点 优点：无需关注宽高；兼容性较好(ie8+) 缺点：代码较多；脱离文档流 -->
+    <div id="parent"><div id="son"></div></div>
+  </body>
+</html>

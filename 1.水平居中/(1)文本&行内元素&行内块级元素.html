@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文本/行内元素/行内块级元素</title>
+    <style type="text/css">
+      #parent {
+        text-align: center;
+      }
+      span {
+        width: 1000px; /* 无效 */
+        height: 10000px; /* 无效 */
+        padding-top: 100px; /* 无效 */
+        /* padding-left: 200px;  水平方向有效 */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 原理：text-align只控制行内内容(文字、行内元素、行内块级元素)如何相对他的块父元素对齐 -->
+    <!-- 优缺点
+         优点：简单快捷，容易理解，兼容性非常好
+         缺点：只对行内内容有效；属性会继承影响到后代行内内容；如果子元素宽度大于父元素宽度则无效，只有后代行内内容中宽度小于设置text-align属性的元素宽度的时候，才会水平居中 
+    -->
+    <div id="parent">
+      <span>文本/行内元素/行内块级元素</span>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>任意个元素(flex)</title>
+    <style type="text/css">
+      #parent {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 原理：就是设置当前主轴对齐方式为居中。说不上为什么，flex无非就是主轴侧轴是重点，然后就是排列方式的设置，可以去看看文末的flex阅读推荐 -->
+    <!-- 优缺点 优点：功能强大；简单方便；容易理解 缺点：PC端兼容性不好，移动端（Android4.0+） -->
+    <div id="parent">
+      <div id="son">任意个元素(flex)</div>
+    </div>
+  </body>
+</html>

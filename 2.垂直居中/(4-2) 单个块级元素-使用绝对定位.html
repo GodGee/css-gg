@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>单个块级元素</title>
+    <style type="text/css">
+      /*原理：子绝父相，top、right、bottom、left的值是相对于父元素尺寸的，然后margin或者transform是相对于自身尺寸的，组合使用达到水平居中的目的*/
+      #parent {
+        position: relative; /*父相*/
+        height: 150px;
+        background-color: hotpink;
+      }
+
+      #son {
+        position: absolute; /*子绝*/
+        top: 50%; /*父元素高度一半,这里等同于top:75px;*/
+        transform: translateY(-50%); /*自身高度一半,这里等同于margin-top:-25px;*/
+        height: 50px;
+      }
+
+      /*优缺点
+            - 优点：使用margin-top兼容性好；不管是块级还是行内元素都可以实现
+            - 缺点：代码较多；脱离文档流；使用margin-top需要知道高度值；使用transform兼容性不好（ie9+）*/
+
+      /*原理：当top、bottom为0时,margin-top&bottom会无限延伸占满空间并且平分*/
+      #parent {
+        position: relative;
+      }
+      #son {
+        position: absolute;
+        margin: auto 0;
+        top: 0;
+        bottom: 0;
+        height: 50px;
+      }
+
+      /*优缺点
+      - 优点：简单;兼容性较好(ie8+)
+      - 缺点：脱离文档流*/
+    </style>
+  </head>
+  <body>
+    <div id="parent">
+      <div id="son">单个块级元素</div>
+    </div>
+  </body>
+</html>

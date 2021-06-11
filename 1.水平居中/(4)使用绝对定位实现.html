@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>使用绝对定位实现</title>
+    <style type="text/css">
+      #parent {
+        height: 200px;
+        width: 200px; /*定宽*/
+        position: relative; /*父相*/
+        background-color: #f00;
+      }
+      #son {
+        position: absolute; /*子绝*/
+        left: 50%; /*父元素宽度一半,这里等同于left:100px*/
+        transform: translateX(-50%); /*自身宽度一半,等同于margin-left: -50px;*/
+        width: 100px; /*定宽*/
+        height: 100px;
+        background-color: #00ff00;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 原理：子绝父相，top、right、bottom、left的值是相对于父元素尺寸的，然后margin或者transform是相对于自身尺寸的，组合使用达到水平居中的目的 -->
+    <!-- 优缺点 
+      优点：使用margin-left兼容性好；不管是块级还是行内元素都可以实现
+      缺点：代码较多；脱离文档流；使用margin-left需要知道宽度值；使用transform兼容性不好（ie9+）
+     -->
+    <div id="parent">
+      <div id="son"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>(3)button作为父元素</title>
+    <style type="text/css">
+      button#parent {
+        /*改掉button默认样式就好了,不需要居中处理*/
+        height: 150px;
+        width: 200px;
+        outline: none;
+        border: none;
+
+        background-color: hotpink;
+      }
+      #son {
+        display: inline-block; /*button自带text-align: center,改为行内水平居中生效*/
+
+        background-color: green;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 原理：button的默认样式，再把需要居中的元素表现形式改为行内或行内块级就好 -->
+    <!-- 优缺点 优点：简单方便，充分利用默认样式 缺点：只适用于行内内容；需要清除部分默认样式；水平垂直居中兼容性很好，但是ie下点击会有凹陷效果！ -->
+    <button id="parent"><div id="son"></div></button>
+  </body>
+</html>

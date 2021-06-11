@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>padding + 负margin</title>
+    <style type="text/css">
+    .layout {
+        overflow: hidden;
+        height: 200px;
+        background: gray;
+        min-width: 500px;
+    }
+
+
+
+    section {
+        float: left;
+        width: 33.3%;
+        height: 200px;
+    }
+
+    .padmar {
+        padding-bottom: 1000px;
+        margin-bottom: -1000px;
+    }
+
+    .green {
+        background-color: #41ab3e;
+    }
+
+    .orange {
+        background-color: orange;
+    }
+
+    .blue {
+        background-color: #4ba0d8;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="layout">
+        <main>
+            <section class="padmar green"></section>
+            <section class="padmar orange"></section>
+            <section class="padmar blue"></section>
+        </main>
+    </div>
+</body>
+
+</html>

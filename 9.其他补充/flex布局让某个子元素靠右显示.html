@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex布局让某个子元素靠右显示</title>
+    <style type="text/css">
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .title {
+        box-sizing: border-box;
+        width: 375px;
+        padding: 0 20px;
+        height: 50px;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        background-color: pink;
+      }
+      .left {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 不用浮动，我用了flex布局，接着左边的字体按照正常写法，想要右边字体靠右显示 方案1：左侧flex设为1 自然将右标题挤到右边。
+    方案2：:右边字体flex设为1，text-alight为right即可 -->
+
+    <div class="title">
+      <p class="left">我是左边标题</p>
+      <p>我是右边标题</p>
+    </div>
+  </body>
+</html>

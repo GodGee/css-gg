@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: beige;
+      }
+
+      section {
+        display: inline;
+        background: lightgray;
+      }
+
+      p {
+        width: 50%; /* == half the body's width */
+        height: 200px; /* Note: a percentage would be 0 */
+        background: cyan;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 在这个示例中，P 标签的包含块为 <body> 元素，因为 <section> 不再是一个块容器，所以并没有形成一个格式上下文。 -->
+    <section>
+      <p>This is a paragraph!</p>
+    </section>
+  </body>
+</html>

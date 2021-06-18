@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: beige;
+      }
+
+      section {
+        width: 400px;
+        height: 480px;
+        margin: 30px;
+        padding: 15px;
+        background: lightgray;
+      }
+
+      p {
+        position: fixed;
+        width: 50%; /* == (50vw - (width of vertical scrollbar)) */
+        height: 50%; /* == (50vh - (height of horizontal scrollbar)) */
+        margin: 5%; /* == (5vw - (width of vertical scrollbar)) */
+        padding: 5%; /* == (5vw - (width of vertical scrollbar)) */
+        background: cyan;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 这个示例中，P 元素的 position 为 fixed，所以它的包含块就是初始包含块（在屏幕上，也就是 viewport）。这样的话，P 元素的尺寸大小，将会随着浏览器窗框大小的变化，而变化。 -->
+    <section>
+      <p>This is a paragraph!</p>
+    </section>
+  </body>
+</html>

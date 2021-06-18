@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style type="text/css">
+      /* 第一种情况  */
+      #item1 {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+      }
+      #item2 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+      #content {
+        margin-left: 100px;
+        margin-top: 100px;
+        position: absolute;
+        padding: 20px;
+        border: 10px solid black;
+      }
+      /* 第二种情况  */
+      #item1 {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+      }
+      #item2 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: absolute;
+        left: 20px;
+        top: 20px;
+      }
+      #content {
+        margin-left: 100px;
+        margin-top: 100px;
+        position: absolute;
+        padding: 20px;
+        border: 10px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 第一种情况    -->
+    <!-- 注意到变化了吗，当把外层div设置为absolute时，外层div宽度由原来的100%变为auto.
+    当把一个元素position属性设置为absolute或fixed的时候，会发生三件事：
+    1、把该元素往 Z 轴方向移了一层，元素脱离了普通流，所以不再占据原来那层的空间，还会覆盖下层的元素。
+    2、该元素将变为块级元素，相当于给该元素设置了 display: block;（给一个内联元素，如 <span> ，设置 absolute 之后发现它可以设置宽高了）。
+    3、如果该元素是块级元素，元素的宽度由原来的 width: 100%（占据一行），变为了 auto。　　 -->
+
+    <!-- 第二种情况    -->
+    <!-- 由此可见，如果parent设定了margin，border，padding等属性，那么这个定位点将忽略padding，
+    将会从padding开始的地方(即只从padding的左上角开始)进行定位，这与我们会想当然的以为会以margin的左上端开始定位的想法是不同的。 -->
+    <div id="content">
+      <div id="item1">item1</div>
+      <div id="item2">item2</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="Authar" content="木人子韦一日尘" />
+    <title>cloneNode()与cloneNode(true)的区别</title>
+    <style>
+      .divClones > div {
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div style="background-color: green; width: 200px; height: 200px; text-align: center; line-height: 200px">我才是真的绿色</div>
+    </div>
+    <div>
+      <button onclick="cloneDiv()">cloneNode()</button>
+      <button onclick="cloneTrueDiv()">cloneNode(true)</button>
+    </div>
+    <div class="divClones"></div>
+    <script>
+      //获取克隆的对象‘我才是真的绿色’
+      var getCloneDiv = document.querySelector('body>div>div:nth-child(1)')
+      getCloneDiv.addEventListener('click', function () {
+        alert('创造者')
+      })
+      // 点击cloneNode（），从下图看出，点击克隆节点无事件发生，且没有 我才是真的绿色 的文字，克隆的节点复制真节点的样式，标签，属性。至于标签里的元素，事件没有复制，所以我们可以称它浅克隆。
+      function cloneDiv() {
+        var clo = getCloneDiv.cloneNode() //用cloneNode（）克隆
+        console.log(clo)
+        document.querySelector('.divClones').appendChild(clo) //把cloneNode（）克隆的节点添加在class为divClones节点中
+      }
+      // 点击cloneNode（true），图片可以猜出来，完全把真节点的东西给复制了过来，我们称它为深克隆，
+      function cloneTrueDiv() {
+        var clo = getCloneDiv.cloneNode(true) //用cloneNode（true）克隆
+        console.log(clo)
+        document.querySelector('.divClones').appendChild(clo) //把cloneNode（true）克隆的节点添加在class为divClones节点中
+      }
+    </script>
+  </body>
+</html>

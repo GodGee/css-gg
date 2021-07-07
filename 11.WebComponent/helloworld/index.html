@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <custom-button></custom-button>
+    <template id="custom-button">
+      <button>自定义按钮</button>
+
+      <style>
+        button {
+          display: inline-block;
+          line-height: 1;
+          white-space: nowrap;
+          cursor: pointer;
+          text-align: center;
+          box-sizing: border-box;
+          outline: none;
+          margin: 0;
+          transition: 0.1s;
+          font-weight: 500;
+          padding: 12px 20px;
+          font-size: 14px;
+          border-radius: 4px;
+          color: #fff;
+          background-color: #409eff;
+          border-color: #409eff;
+          border: 0;
+        }
+
+        button:active {
+          background: #3a8ee6;
+          border-color: #3a8ee6;
+          color: #fff;
+        }
+      </style>
+    </template>
+  </body>
+  <script type="application/javascript" src="CustomButton.js"></script>
+</html>
+<!-- 从上面的代码可以发现，我们为这个自定义元素设置了内容 <button>自定义按钮</button> 以及样式，样式放在 <style> 标签里。可以说 <template> 其实就是一个 HTML 模板。 -->

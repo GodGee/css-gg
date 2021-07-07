@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Exo:wght@600&display=swap');
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      img {
+        display: block;
+        vertical-align: top;
+      }
+
+      body {
+        width: 100vw;
+        min-height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        font-family: 'Exo', Arial, sans-serif;
+        background-color: #f7f7f7;
+
+        padding: 20px;
+      }
+
+      section {
+        max-width: 40vw;
+        margin: 0 auto;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        box-shadow: 0 0 0 6px rgb(0 0 0 / 13%);
+        border-radius: 6px;
+        padding: 10px 0;
+      }
+
+      p {
+        width: 100%;
+        padding-right: 5px;
+        font-size: 14px;
+        color: #666;
+      }
+
+      .container {
+        border: 1px dashed #f36;
+        border-radius: 1px;
+        width: 100%;
+        position: relative;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        resize: horizontal;
+      }
+
+      .container[data-aspect='padding-top'] .box {
+        height: 0;
+        padding-top: 56.25%;
+        width: 100%;
+        position: relative;
+      }
+
+      .container[data-aspect='padding-top'] img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+
+      .container[data-aspect='CSS Variables'] img {
+        --ratio: 16/9;
+        height: calc(var(--width) * 1 / (var(--ratio)));
+        width: 100%;
+      }
+
+      .container[data-aspect='aspect-ratio'] img {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h3>CSS padding-top</h3>
+      <div class="container" data-aspect="padding-top">
+        <div class="box">
+          <img src="https://picsum.photos/900/508?random=2" alt="" />
+        </div>
+      </div>
+      <p style="text-align: right">Press and hold me to drag left or right</p>
+    </section>
+    <section>
+      <h3>CSS Variables</h3>
+      <div class="container" data-aspect="CSS Variables" id="box">
+        <img src="https://picsum.photos/900/508?random=4" alt="" />
+      </div>
+      <p style="text-align: right">Press and hold me to drag left or right</p>
+    </section>
+    <section>
+      <h3>CSS aspect-ratio</h3>
+      <div class="container" data-aspect="aspect-ratio">
+        <img src="https://picsum.photos/900/508?random=6" alt="" />
+      </div>
+      <p style="text-align: right">Press and hold me to drag left or right</p>
+    </section>
+  </body>
+</html>

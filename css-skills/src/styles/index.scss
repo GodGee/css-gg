@@ -1,0 +1,324 @@
+html,body,h3,li,ul{
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  list-style: none;
+}
+// mixin
+@mixin box-sizing ($sizing) {
+  -webkit-box-sizing:$sizing;
+  -moz-box-sizing:$sizing;
+  -ms-box-sizing:$sizing;
+  -o-box-box-sizing:$sizing;
+  box-sizing:$sizing;
+}
+
+@mixin translate($x, $y){
+  -webkit-transform: translate($x, $y);
+  -moz-transform: translate($x, $y);
+  -ms-transform: translate($x, $y);
+  -o-transform: translate($x, $y);
+  transform: translate($x, $y);
+}
+
+@mixin rotate($deg){
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  transform: rotate($deg);
+}
+
+// colors
+$greyColor:#939aa2;
+
+.mgb10{
+  margin-bottom: 10px;
+}
+.pd10{
+  padding: 10px;
+}
+
+
+.line16{
+  line-height: 16px;
+}
+
+.basic{
+  margin: 10px;
+  padding: 10px;
+  border: dashed 1px green;
+  color: #fff;
+  font-size: 14px;
+  h3{
+    font: 16px/30px "微软雅黑";
+    color: green;
+    border-bottom: dashed 1px green;
+    margin-bottom: 10px;
+  }
+  *{
+    @include box-sizing(border-box);
+  }
+}
+
+// 清除浮动
+.clearfix{
+  zoom: 1;
+}
+.clearfix:after{
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.demo1 >li{
+  width: 25%;
+  height: 40px;
+  float: left;
+}
+.demo1 >li:nth-last-of-type(1){
+  background-color: pink;
+}
+.demo1 >li:nth-last-of-type(2){
+  background-color: blue;
+}
+.demo1 >li:nth-last-of-type(3){
+  background-color: green;
+}
+.demo1 >li:nth-last-of-type(4){
+  background-color: grey;
+}
+
+// 垂直水平居中
+.center-wrap{
+  position: relative;
+  height: 8em;
+  text-align: center;
+  background-color: #f3f3f3;
+  .center1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -3em;
+    margin-left: -7em;
+    width: 14em;
+    height: 6em;
+    background-color:$greyColor;
+    line-height:  6em;
+  }
+  .center2{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    @include translate(-50%, -50%);
+    background-color: $greyColor;
+  }
+  &.center3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span{
+      background-color: $greyColor;
+    }
+  }
+}
+
+// 文本末尾添加省略号
+.demo3{
+  background-color: $greyColor;
+}
+.ellipsis{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  &.wh120{
+    width: 120px;
+  }
+}
+
+.more-line{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-height: 20px;
+}
+
+// 制造文本的模糊效果
+.blurry{
+  color: transparent;
+  text-shadow:0 0 2px rgba(0,0,0,.5);
+}
+
+// 简洁动画loading效果
+
+.loading{
+  background-color: $greyColor;
+  &:after{
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: bottom;
+    content: '\2026';
+    -webkit-animation: ellipsis 2s infinite;
+  }
+}
+
+@-webkit-keyframes ellipsis{
+  from{
+    width: 2px;
+  }
+  to{
+    width: 15px;
+  }
+}
+
+//自定义选中文本样式
+.selection{
+  color: #000;
+  &::selection{
+    color: green;
+    background-color: pink;
+  }
+  &::-moz-selection{
+    color: green;
+    background-color: pink;
+  }
+}
+
+// 顶角贴纸效果
+.ribbon-wrap{
+  >div{
+    width: 160px;
+    height:160px;
+    overflow:hidden;
+    position: relative;
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background-color: #f3f3f3;
+  .ribbon {
+    background-color: #a00;
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+    /* rotate */
+    /* shadow */
+    -webkit-box-shadow: 0 0 10px #888;
+    -moz-box-shadow: 0 0 10px #888;
+    box-shadow: 0 0 10px #888;
+    a {
+      border: 1px solid #faa;
+      color: #fff;
+      display: block;
+      font: bold 81.25% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      margin: 1px 0;
+      padding: 10px 50px;
+      text-align: center;
+      text-decoration: none;
+      /* shadow */
+      text-shadow: 0 0 5px #444;
+    }
+  }
+    .ribbon.top-left{
+      @include rotate(-45deg);
+      left: -50px;
+      top: 40px;
+    }
+    .ribbon.top-right{
+      right: -50px;
+      top: 40px;
+      @include rotate(45deg);
+    }
+    .ribbon.bottom-left{
+      left: -50px;
+      bottom: 40px;
+      @include rotate(-135deg);
+    }
+    .ribbon.bottom-right{
+      right: -50px;
+      bottom: 40px;
+      @include rotate(135deg);
+    }
+  }
+}
+
+// 占位符
+.placeholder{
+    input.modify{
+      padding: 6px;
+    }
+   input.modify::-webkit-input-placeholder{
+    color: green;
+    background-color: #F9F7F7;
+    font-size: 14px;
+   }
+   input.modify::-moz-input-placeholder{
+    color: green;
+    background-color: #F9F7F7;
+    font-size: 14px;
+   }
+   input.modify::-ms-input-placeholder{
+    color: green;
+    background-color: #F9F7F7;
+    font-size: 14px;
+   }
+}
+
+// 移动端元素点击去除边框
+.remove-highlight{
+  text-align: center;
+  a{
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+    margin-left: 20px;
+  }
+  a:nth-last-of-type(2){
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  }
+}
+
+
+// 设置首字下沉
+.sink{
+  color: #000;
+  &:first-letter{
+		float:left;
+		color:green;
+		font-size:30px;
+  }
+}
+
+// 三角形
+.triangle{
+  display: inline-block;
+  border: solid 10px transparent;
+  margin-left: 10px;
+  &.top{
+    border-bottom-color: green;
+  }
+  &.bottom{
+    border-top-color: green;
+  }
+  &.left{
+    border-right-color: green;
+  }
+  &.right{
+    border-left-color: green;
+  }
+}
+
+// 手型
+.pointer{
+  color: #000;
+  *{
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+  a[href],input[type='submit'], input[type='image'],input[type='button'], label[for], select, button {
+    cursor: pointer;
+  }
+}

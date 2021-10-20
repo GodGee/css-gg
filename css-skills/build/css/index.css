@@ -1,0 +1,256 @@
+@charset "UTF-8";
+html, body, h3, li, ul {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+.mgb10 {
+  margin-bottom: 10px; }
+
+.pd10 {
+  padding: 10px; }
+
+.line16 {
+  line-height: 16px; }
+
+.basic {
+  margin: 10px;
+  padding: 10px;
+  border: dashed 1px green;
+  color: #fff;
+  font-size: 14px; }
+  .basic h3 {
+    font: 16px/30px "微软雅黑";
+    color: green;
+    border-bottom: dashed 1px green;
+    margin-bottom: 10px; }
+  .basic * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-box-sizing: border-box;
+    box-sizing: border-box; }
+
+.clearfix {
+  zoom: 1; }
+
+.clearfix:after {
+  display: block;
+  content: '';
+  clear: both; }
+
+.demo1 > li {
+  width: 25%;
+  height: 40px;
+  float: left; }
+
+.demo1 > li:nth-last-of-type(1) {
+  background-color: pink; }
+
+.demo1 > li:nth-last-of-type(2) {
+  background-color: blue; }
+
+.demo1 > li:nth-last-of-type(3) {
+  background-color: green; }
+
+.demo1 > li:nth-last-of-type(4) {
+  background-color: grey; }
+
+.center-wrap {
+  position: relative;
+  height: 8em;
+  text-align: center;
+  background-color: #f3f3f3; }
+  .center-wrap .center1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -3em;
+    margin-left: -7em;
+    width: 14em;
+    height: 6em;
+    background-color: #939aa2;
+    line-height: 6em; }
+  .center-wrap .center2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #939aa2; }
+  .center-wrap.center3 {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .center-wrap.center3 span {
+      background-color: #939aa2; }
+
+.demo3 {
+  background-color: #939aa2; }
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+  .ellipsis.wh120 {
+    width: 120px; }
+
+.more-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-height: 20px; }
+
+.blurry {
+  color: transparent;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5); }
+
+.loading {
+  background-color: #939aa2; }
+  .loading:after {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: bottom;
+    content: '\2026';
+    -webkit-animation: ellipsis 2s infinite; }
+
+@-webkit-keyframes ellipsis {
+  from {
+    width: 2px; }
+  to {
+    width: 15px; } }
+
+.selection {
+  color: #000; }
+  .selection::selection {
+    color: green;
+    background-color: pink; }
+  .selection::-moz-selection {
+    color: green;
+    background-color: pink; }
+
+.ribbon-wrap > div {
+  width: 160px;
+  height: 160px;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  background-color: #f3f3f3; }
+  .ribbon-wrap > div .ribbon {
+    background-color: #a00;
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+    /* rotate */
+    /* shadow */
+    -webkit-box-shadow: 0 0 10px #888;
+    -moz-box-shadow: 0 0 10px #888;
+    box-shadow: 0 0 10px #888; }
+    .ribbon-wrap > div .ribbon a {
+      border: 1px solid #faa;
+      color: #fff;
+      display: block;
+      font: bold 81.25% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      margin: 1px 0;
+      padding: 10px 50px;
+      text-align: center;
+      text-decoration: none;
+      /* shadow */
+      text-shadow: 0 0 5px #444; }
+  .ribbon-wrap > div .ribbon.top-left {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    left: -50px;
+    top: 40px; }
+  .ribbon-wrap > div .ribbon.top-right {
+    right: -50px;
+    top: 40px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .ribbon-wrap > div .ribbon.bottom-left {
+    left: -50px;
+    bottom: 40px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg); }
+  .ribbon-wrap > div .ribbon.bottom-right {
+    right: -50px;
+    bottom: 40px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg); }
+
+.placeholder input.modify {
+  padding: 6px; }
+
+.placeholder input.modify::-webkit-input-placeholder {
+  color: green;
+  background-color: #F9F7F7;
+  font-size: 14px; }
+
+.placeholder input.modify::-moz-input-placeholder {
+  color: green;
+  background-color: #F9F7F7;
+  font-size: 14px; }
+
+.placeholder input.modify::-ms-input-placeholder {
+  color: green;
+  background-color: #F9F7F7;
+  font-size: 14px; }
+
+.remove-highlight {
+  text-align: center; }
+  .remove-highlight a {
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+    margin-left: 20px; }
+  .remove-highlight a:nth-last-of-type(2) {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
+
+.sink {
+  color: #000; }
+  .sink:first-letter {
+    float: left;
+    color: green;
+    font-size: 30px; }
+
+.triangle {
+  display: inline-block;
+  border: solid 10px transparent;
+  margin-left: 10px; }
+  .triangle.top {
+    border-bottom-color: green; }
+  .triangle.bottom {
+    border-top-color: green; }
+  .triangle.left {
+    border-right-color: green; }
+  .triangle.right {
+    border-left-color: green; }
+
+.pointer {
+  color: #000; }
+  .pointer * {
+    margin-left: 10px;
+    margin-bottom: 10px; }
+  .pointer a[href], .pointer input[type='submit'], .pointer input[type='image'], .pointer input[type='button'], .pointer label[for], .pointer select, .pointer button {
+    cursor: pointer; }
